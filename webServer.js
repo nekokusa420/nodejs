@@ -1,5 +1,8 @@
 const http = require("http");
 const fs = require("fs");
+const dayjs = require("dayjs");
+
+console.log(dayjs().format("YYYY.MM.DD"));
 
 const server = http.createServer((req, res) => {
   // console.log("Request has received");
@@ -16,7 +19,7 @@ const server = http.createServer((req, res) => {
       path += "about.html";
       res.statusCode = 200;
       break;
-    case "/aboutme":
+    case "/aboutus":
       path += "about.html";
       res.statusCode = 301;
       res.setHeader("Location", "/about");
