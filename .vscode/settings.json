@@ -4,4 +4,10 @@
         "titleBar.activeBackground": "#3B3976",
         "titleBar.activeForeground": "#FBFBFD"
     }
+    "emmet.includeLanguages": {
+        "ejs": "html",
+      },
+     "[html]": {
+        "editor.defaultFormatter": "j69.ejs-beautify"
+      },
 }

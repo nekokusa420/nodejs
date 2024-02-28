@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('header.ejs')%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%=courseName%>
-    </title>
-</head>
+<h1>Index</h1>
+<h2>
+  <!-- =直接顯示值 -->
+  <%=time%>
+</h2>
+<% if (blogs.length) { %>
+<% blogs.forEach( acticles=>{ %>
+<h3>標題:<%=acticles.title%></h3>
+<p>作者:<%=acticles.author%></p>
+<%} ) %>
+<% } else { %>
+<p>no文章</p>
+<% } %>
 
-<body>
-    <h1>Index</h1>
-    <h2>
-        <%=time%>
-    </h2>
-
-</body>
-
-</html>
+<%- include('footer.ejs')%>
